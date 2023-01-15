@@ -24,32 +24,45 @@ const Header = () => {
       whileInView="show"
       className={`bg-primary paddings ${css.wrapper}`}
       viewport={{ once: true, amount: 0.25 }}
-      style={{boxShadow: headerShadow}}
+      style={{ boxShadow: headerShadow }}
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
-        <div className={css.name}>Binjan</div>
+        <div className={css.name}>Kapestar</div>
         <ul
           className={`flexCenter ${css.menu}`}
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
         >
-          <li><a href="#experties">Services</a></li>
-          <li><a href="#work">Experience</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#people">Testimonials</a></li>
+          <li>
+            <a href="#experties">Services</a>
+          </li>
+          <li>
+            <a href="#work">Experience</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#people">Testimonials</a>
+          </li>
           <li className={`flexCenter ${css.phone}`}>
-            <p>+001 (313) 345 678</p>
-            <BiPhoneCall size={"40px"} />
+            <p>+91 8017348894</p>
+            <a
+              target="_blank"
+              href="https://api.whatsapp.com/send/?phone=918017348894"
+            >
+              <BiPhoneCall size={"40px"} />
+            </a>
           </li>
         </ul>
 
         {/* for medium and small screens */}
-        <div
+        <button
           className={css.menuIcon}
           onClick={() => setMenuOpened((prev) => !prev)}
         >
           <BiMenuAltRight size={30} />
-        </div>
+        </button>
       </div>
     </motion.div>
   );

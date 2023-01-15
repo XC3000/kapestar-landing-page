@@ -1,93 +1,119 @@
 import { HiOutlineDesktopComputer } from "react-icons/hi";
-import { MdLocalOffer } from "react-icons/md";
-import { BiRupee, BiHelpCircle, BiCoinStack } from "react-icons/bi";
-import { IoPeopleCircleOutline } from "react-icons/io5";
-import { AiFillStar } from "react-icons/ai";
-import { BsFillPeopleFill } from "react-icons/bs";
-import { MdWorkspacesOutline, MdSubscriptions } from "react-icons/md";
+import { CiMobile1 } from "react-icons/ci";
+import { MdWorkspacesOutline } from "react-icons/md";
 export const projectExperience = [
   {
-    name: "Scheduled Booking",
+    name: "Website Design",
     projects: 76,
     icon: HiOutlineDesktopComputer,
     bg: "#286F6C",
   },
   {
-    name: "Choose Your Stylist",
+    name: "Mobile App Design",
     projects: 63,
-    icon: BsFillPeopleFill,
+    icon: CiMobile1,
     bg: "#EEC048",
   },
   {
-    name: "Assured Skilled Stylists",
+    name: "Brand Identity",
     projects: 47,
-    icon: AiFillStar,
+    icon: MdWorkspacesOutline,
     bg: "#F26440",
   },
   {
-    name: "Attractive offers",
+    name: "Brand Identity",
     projects: 47,
-    icon: MdLocalOffer,
+    icon: MdWorkspacesOutline,
     bg: "#F26440",
   },
   {
-    name: "Subscriptions",
+    name: "Brand Identity",
     projects: 47,
-    icon: MdSubscriptions,
+    icon: MdWorkspacesOutline,
     bg: "#F26440",
   },
   {
-    name: "Cashback for every use",
+    name: "Brand Identity",
     projects: 47,
-    icon: BiRupee,
+    icon: MdWorkspacesOutline,
     bg: "#F26440",
   },
   {
-    name: "24*7 Helpline",
+    name: "Brand Identity",
     projects: 47,
-    icon: BiHelpCircle,
+    icon: MdWorkspacesOutline,
     bg: "#F26440",
   },
   {
-    name: "Competetive Pricing",
+    name: "Brand Identity",
     projects: 47,
-    icon: BiCoinStack,
+    icon: MdWorkspacesOutline,
     bg: "#F26440",
   },
   {
-    name: "Community (Building)",
+    name: "Brand Identity",
     projects: 47,
-    icon: IoPeopleCircleOutline,
+    icon: MdWorkspacesOutline,
+    bg: "#F26440",
+  },
+  {
+    name: "Brand Identity",
+    projects: 47,
+    icon: MdWorkspacesOutline,
+    bg: "#F26440",
+  },
+  {
+    name: "Brand Identity",
+    projects: 47,
+    icon: MdWorkspacesOutline,
+    bg: "#F26440",
+  },
+  {
+    name: "Brand Identity",
+    projects: 47,
+    icon: MdWorkspacesOutline,
+    bg: "#F26440",
+  },
+  {
+    name: "Brand Identity",
+    projects: 47,
+    icon: MdWorkspacesOutline,
+    bg: "#F26440",
+  },
+  {
+    name: "Brand Identity",
+    projects: 47,
+    icon: MdWorkspacesOutline,
     bg: "#F26440",
   },
 ];
 
 export const WhatDoIHelp = [
-  "A salon app with pre-booking service and seasoned stylists can greatly enhance the customer experience by providing convenience, quality, and choice.",
-  "Customers can schedule appointments at their convenience, receive expert styling and advice, and have access to exclusive deals and discounts all at the touch of their fingertips.",
+  "I will help you with finging a solution and solve your problem, We use process design to create digital products. Besides that also help their business.",
+  "We use process design to create digital products. Besides that also help their business",
 ];
 
 export const workExp = [
   {
-    place: "Convenient Appointment Booking",
-    tenure: "Schedule Appointments Effortlessly",
+    place: "Self-Employed, Brisbane",
+    tenure: "Aug 2014 - Sep 2016",
     role: "Visual Designer",
     detail:
-      "Book your next appointment at your convenience, view stylist portfolios, and read customer reviews, all through our easy-to-use salon app.",
+      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
   },
   {
-    place: "Expert Styling Services",
-    tenure: "Expert Styling at Your Fingertips",
+    place: "New Man Services",
+    tenure: "Aug 2014 - Sep 2016",
     role: "UI/UX Designer",
     detail:
-      "Experience the best of hair, beauty and spa services with our seasoned stylists, who are trained and updated with the latest trends.",
+      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
   },
   {
-    place: "Attractive Offers and Pricing",
-    tenure: "Discounts for App Users",
+    place: "Global Solution",
+    tenure: "Aug 2014 - Sep 2016",
     role: "Sr. Product Designer",
     detail:
-      "Get the best value for your money with competitive pricing, regular update of attractive offers, discounts, and special promotions through our salon app.",
+      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
   },
 ];
 
