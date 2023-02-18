@@ -2,6 +2,29 @@ import React from "react";
 import { footerVariants, staggerChildren } from "../../utils/motion";
 import css from "./Footer.module.scss";
 import { motion } from "framer-motion";
+
+const data = [
+  {
+    name: "Privacy Policy",
+    link: "https://merchant.razorpay.com/policy/LHctrgqDRRt9Hx/privacy",
+  },
+
+  {
+    name: "Terms & Conditions",
+    link: "https://merchant.razorpay.com/policy/LHctrgqDRRt9Hx/terms",
+  },
+
+  {
+    name: "Cancellation & Refund Policy",
+    link: "https://merchant.razorpay.com/policy/LHctrgqDRRt9Hx/refund",
+  },
+
+  {
+    name: "Contact us",
+    link: "https://merchant.razorpay.com/policy/LHctrgqDRRt9Hx/contact_us",
+  },
+];
+
 const Footer = () => {
   return (
     <motion.section
@@ -20,21 +43,22 @@ const Footer = () => {
             Let's make something <br />
             amazing together.
           </span>
-          <span className="primaryText">
+          {/* <span className="primaryText">
             Start by <a href="mailto:zainkeepscode@gmail.com">saying hi</a>
-          </span>
+          </span> */}
         </div>
 
         <div className={css.right}>
           <div className={css.info}>
             <span className="secondaryText">Information</span>
-            <p>Konnagar, Kolkata, West Bengal, India</p>
+            <p>West Bengal, India</p>
           </div>
           <ul className={css.menu}>
-            <li>Services</li>
-            <li>Works</li>
-            <li>Notes</li>
-            <li>Experience</li>
+            {data.map(({ name, link }) => (
+              <li>
+                <a href={link}>{name}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </motion.div>

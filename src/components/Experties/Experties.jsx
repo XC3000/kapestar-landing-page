@@ -37,7 +37,7 @@ const Experties = () => {
 
         {/* right */}
         <motion.div variants={textVariant(0.5)} className={css.rightSide}>
-          <span className="primaryText">Why choose Kapestar? </span>
+          <h3 className="primaryText">Why choose Kapestar? </h3>
           {WhatDoIHelp.map((paragraph, i) => (
             <span className="secondaryText" key={i}>
               {paragraph}

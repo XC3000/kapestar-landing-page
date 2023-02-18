@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import useWindowScroll from "../../hooks/useWindowScroll";
 
+import "./Header.scss";
+
 const data = [
   {
     link: "/",
