@@ -114,6 +114,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  padding-top: 2rem;
 }
 
 .nav__logo,
@@ -127,7 +128,8 @@ button {
   column-gap: .25rem;
   font-weight: var(--font-medium);
   transition: .3s;
-  font-size: var(--h2-font-size);
+  font-size: var(--biggest-font-size);
+  font-family: "Shantell Sans", cursive;
 
 }
 

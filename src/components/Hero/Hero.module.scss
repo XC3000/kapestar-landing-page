@@ -1,17 +1,14 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  // max-width: 1200px;
-  // margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 2rem;
-
-  // padding-bottom: 5rem;
+  flex-direction: row;
+  margin-top: 0;
 
   @media (max-width: $lg) {
-    grid-template-columns: 1fr;
+    flex-direction: column-reverse;
+    margin-top: 2rem;
   }
 
   .heroImg {
