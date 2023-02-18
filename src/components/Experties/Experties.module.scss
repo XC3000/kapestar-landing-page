@@ -61,7 +61,7 @@
 
           > :nth-child(1) {
             font-weight: bold;
-            font-size: 1rem;
+            font-size: var(--small-font-size);
 
             @media (max-width: $md) {
               font-size: 0.7rem;

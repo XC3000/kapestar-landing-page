@@ -1,90 +1,69 @@
 @import "../../styles/contants.scss";
 
 .wrapper {
-  overflow: hidden;
+  // max-width: 1200px;
+  // margin: 0 auto;
 
-  .container {
-    position: relative;
-    z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 
-    .upperElements {
-      @media (max-width: $sm) {
-        justify-content: center;
-        text-align: center;
-        gap: 2rem;
-      }
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+  // padding-bottom: 5rem;
 
-    .lowerElements {
-      @media (max-width: $sm), (max-width: $md) {
-        margin-top: 4rem;
-        gap: 2rem;
-        justify-content: center;
-      }
-      margin-top: 12rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .experience {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        > :nth-child(2) {
-          line-height: 25px;
-        }
-      }
+  @media (max-width: $lg) {
+    grid-template-columns: 1fr;
+  }
 
-      .certificate {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  .heroImg {
+    width: 100%;
+  }
 
-        img {
-          margin-bottom: 1rem;
-          width: 3.5rem;
-        }
-      }
-    }
+  .tagline {
+    font-weight: 600;
+    font-size: var(--biggest-font-size);
+    line-height: 120%;
+    margin-bottom: 1rem;
+    font-family: "Shantell Sans", cursive;
+  }
 
-    .person {
-      @media (max-width: $sm), (max-width: $md) {
-        position: relative;
-        left: 0;
-        background-size: 20rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-position: bottom;
-      }
-      position: absolute;
-      bottom: -2rem;
-      margin: auto;
-      background-image: url("../splash.png");
-      background-repeat: no-repeat;
-      background-size: 23rem;
-      left: 33%;
+  .details {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #8a8987;
+    font-size: var(--normal-font-size);
+  }
 
-      img {
-        @media (max-width: $sm) {
-          width: 23rem;
-        }
-        margin-bottom: -5px;
-      }
-    }
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
 
-    .email {
-      @media (max-width: $sm) {
-        position: relative;
-        display: none;
-      }
-      position: absolute;
-      top: 50%;
-      left: 0;
-      color: orange;
-    }
+  .cta {
+    background-color: $primary;
+    color: $secondary-white;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .heroImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .taglineWrapper {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
   }
 }

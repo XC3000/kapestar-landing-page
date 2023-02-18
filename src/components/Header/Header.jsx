@@ -1,70 +1,80 @@
-import React, { useEffect, useRef, useState } from "react";
-import css from "./Header.module.scss";
-import { BiPhoneCall, BiMenuAltRight } from "react-icons/bi";
-import { motion } from "framer-motion";
-import { getMenuStyles, headerVariants } from "../../utils/motion";
-import useOutsideAlerter from "../../hooks/useOutsideAlerter";
-import useHeaderShadow from "../../hooks/useHeaderShadow";
+import React, { useState } from "react";
+import useMediaQuery from "../../hooks/useMediaQuery";
+import useWindowScroll from "../../hooks/useWindowScroll";
+
+const data = [
+  {
+    link: "/",
+    name: "Home",
+  },
+  {
+    link: "/",
+    name: "About",
+  },
+  {
+    link: "/",
+    name: "Onboarding",
+  },
+  {
+    link: "/",
+    name: "Contact",
+  },
+];
 
 const Header = () => {
-  const menuRef = useRef(null);
-  const [menuOpened, setMenuOpened] = useState(false);
-  const headerShadow = useHeaderShadow();
-
-  //to handle click outside of sidebar on mobile
-  useOutsideAlerter({
-    menuRef,
-    setMenuOpened,
-  });
+  const [showMenu, setShowMenu] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 800px)");
+  const isScrolled = useWindowScroll();
 
   return (
-    <motion.div
-      variants={headerVariants}
-      initial="hidden"
-      whileInView="show"
-      className={`bg-primary paddings ${css.wrapper}`}
-      viewport={{ once: true, amount: 0.25 }}
-      style={{ boxShadow: headerShadow }}
+    <header
+      className={`header ${isScrolled > 0 ? "nav-fixed" : ""}`}
+      id="header"
     >
-      <div className={`innerWidth ${css.container} flexCenter`}>
-        <div className={css.name}>Kapestar</div>
-        <ul
-          className={`flexCenter ${css.menu}`}
-          ref={menuRef}
-          style={getMenuStyles(menuOpened)}
-        >
-          <li>
-            <a href="#experties">Services</a>
-          </li>
-          <li>
-            <a href="#work">Experience</a>
-          </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="#people">Testimonials</a>
-          </li>
-          <li className={`flexCenter ${css.phone}`}>
-            <p>+91 8017348894</p>
-            <a
-              target="_blank"
-              href="https://api.whatsapp.com/send/?phone=918017348894"
-            >
-              <BiPhoneCall size={"40px"} />
-            </a>
-          </li>
-        </ul>
+      <nav className="nav container">
+        <a href="#" className="nav__logo">
+          Kapestar
+        </a>
 
-        {/* for medium and small screens */}
-        <button
-          className={css.menuIcon}
-          onClick={() => setMenuOpened((prev) => !prev)}
+        <div
+          className={`nav__menu ${isMobile && showMenu ? "show-menu" : ""}`}
+          id="nav-menu"
         >
-          <BiMenuAltRight size={30} />
-        </button>
-      </div>
-    </motion.div>
+          <ul className="nav__list">
+            {data.map((item) => (
+              <li className="nav__item">
+                <a href={item.link} className="nav__link">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {isMobile ? (
+            <div className="nav__close" id="nav-close">
+              <i
+                className="bx bx-x-circle"
+                onClick={() => {
+                  setShowMenu(false);
+                }}
+              ></i>
+            </div>
+          ) : null}
+        </div>
+
+        {isMobile ? (
+          <div
+            className="nav__toggle"
+            id="nav-toggle"
+            onClick={() => {
+              setShowMenu(true);
+            }}
+          >
+            <i className="bx bx-menu"></i>
+          </div>
+        ) : null}
+      </nav>
+    </header>
   );
 };
 
