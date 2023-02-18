@@ -10,7 +10,11 @@ import css from "./styles/App.module.scss";
 const App = () => {
   //don't forget to add font link in index.html
   return (
-    <div>
+    <div
+      style={{
+        overflow: "hidden",
+      }}
+    >
       <Header />
       <Hero />
       <Experties />
