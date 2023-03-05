@@ -55,6 +55,13 @@ const Footer = () => {
   return (
     <div class="container">
       <footer class="pt-5">
+        <img
+          className="mb-5"
+          src="/footer.png"
+          width="40px"
+          height="40px"
+          alt="kapestar"
+        />
         <div class="row flex justify-content-between">
           <div class="col-12 col-md-2 mb-3">
             <h5>Product</h5>
@@ -105,10 +112,7 @@ const Footer = () => {
         </div>
 
         <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 border-top">
-          <p>
-            <img src="/favicon.png" width="70px" height="70px" alt="kapestar" />
-            © 2023 Kapestar Pvt Ltd. All rights reserved.
-          </p>
+          <p>© 2023 Kapestar Pvt Ltd. All rights reserved.</p>
           <ul class="list-unstyled d-flex">
             <li class="ms-3">
               <a class="link-dark" href="#">
