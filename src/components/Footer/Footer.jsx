@@ -56,7 +56,7 @@ const Footer = () => {
     <div class="container">
       <footer class="pt-5">
         <img
-          className="mb-5"
+          className="mb-3"
           src="/footer.png"
           width="40px"
           height="40px"
