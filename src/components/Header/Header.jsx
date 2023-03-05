@@ -1,24 +1,25 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import useWindowScroll from "../../hooks/useWindowScroll";
 
 import "./Header.scss";
 
-const data = [
+export const headerData = [
   {
     link: "/",
     name: "Home",
   },
   {
-    link: "/",
+    link: "#about",
     name: "About",
   },
   {
-    link: "/",
+    link: "#onboarding",
     name: "Onboarding",
   },
   {
-    link: "/",
+    link: "#contact",
     name: "Contact",
   },
 ];
@@ -34,16 +35,16 @@ const Header = () => {
       id="header"
     >
       <nav className="nav container">
-        <a href="#" className="nav__logo">
+        <Link to="/" className="nav__logo">
           Kapestar
-        </a>
+        </Link>
 
         <div
           className={`nav__menu ${isMobile && showMenu ? "show-menu" : ""}`}
           id="nav-menu"
         >
           <ul className="nav__list">
-            {data.map((item) => (
+            {headerData.map((item) => (
               <li className="nav__item">
                 <a href={item.link} className="nav__link">
                   {item.name}

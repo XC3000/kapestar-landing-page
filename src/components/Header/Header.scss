@@ -10,6 +10,11 @@
 .nav-fixed {
   position: fixed;
   background-color: #fff;
+  box-shadow: 0 21px 13px #0000000a;
+
+  @media screen and (min-width: 767px) {
+    padding-bottom: 1rem;
+  }
 }
 
 .nav {
@@ -97,7 +102,7 @@
 @media screen and (min-width: 767px) {
   .nav {
     height: calc(var(--header-height) + 1.5rem);
-    padding-top: 2rem;
+    // padding-top: 2rem;
   }
 
   .nav__toggle,

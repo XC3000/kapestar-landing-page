@@ -7,9 +7,11 @@
     align-items: flex-start;
     gap: 4rem;
     flex-wrap: wrap;
+    flex-direction: column-reverse;
 
-    @media (max-width: $md) {
+    @media (min-width: $lg) {
       gap: 2rem;
+      flex-direction: row;
     }
     > div {
       flex: 1;
@@ -20,6 +22,7 @@
       //   flex-direction: column;
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
+      width: 100%;
 
       .exp {
         display: flex;

@@ -6,6 +6,10 @@
   flex-direction: row;
   margin-top: 0;
 
+  & > * {
+    flex: 50%;
+  }
+
   @media (max-width: $lg) {
     flex-direction: column-reverse;
     margin-top: 2rem;

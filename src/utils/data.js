@@ -93,6 +93,51 @@ export const workExp = [
 
 export const comments = [
   {
+    name: "Roodra Lata",
+    post: "Customer",
+    comment: "Good Service",
+    img: "./profile-male.jpg",
+  },
+
+  {
+    name: "Bhima Sarkar",
+    post: "Customer",
+    comment: "Good and harworking staff",
+    img: "./profile-female.jpg",
+  },
+
+  {
+    name: "Vishnu Kamal",
+    post: "Customer",
+    comment: "Good and experienced staff",
+    img: "./profile-male.jpg",
+  },
+
+  {
+    name: "Hira Bhattacharya",
+    post: "Stylist",
+    comment: "Helped in my better time management",
+    img: "./profile-female.jpg",
+  },
+
+  {
+    name: "Shambhavi Shevade",
+    post: "Stylist",
+    comment: "Never got delayed in any payment of salary",
+    img: "./profile-female.jpg",
+  },
+
+  {
+    name: "Krishna Chaudhari",
+    post: "Salon Owner",
+    comment:
+      "Helped in overall better management of the staff and service and customers",
+    img: "./profile-male.jpg",
+  },
+];
+
+export const comments1 = [
+  {
     name: "Anamika Sandula",
     post: "Creative Manager",
     comment:

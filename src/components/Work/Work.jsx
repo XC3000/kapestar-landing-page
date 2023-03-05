@@ -18,6 +18,7 @@ const Work = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
       className={`paddings ${css.wrapper}`}
+      id="onboarding"
     >
       <a className="anchor" id="work"></a>
 

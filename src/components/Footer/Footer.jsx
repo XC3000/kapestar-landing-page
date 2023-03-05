@@ -2,67 +2,139 @@ import React from "react";
 import { footerVariants, staggerChildren } from "../../utils/motion";
 import css from "./Footer.module.scss";
 import { motion } from "framer-motion";
+import { headerData } from "../Header/Header";
+import { Link } from "react-router-dom";
 
 const data = [
   {
     name: "Privacy Policy",
-    link: "https://merchant.razorpay.com/policy/LHctrgqDRRt9Hx/privacy",
+    link: "/privacy",
   },
 
   {
     name: "Terms & Conditions",
-    link: "https://merchant.razorpay.com/policy/LHctrgqDRRt9Hx/terms",
+    link: "/terms",
   },
 
   {
     name: "Cancellation & Refund Policy",
-    link: "https://merchant.razorpay.com/policy/LHctrgqDRRt9Hx/refund",
+    link: "/cancellation",
   },
 
   {
-    name: "Contact us",
-    link: "https://merchant.razorpay.com/policy/LHctrgqDRRt9Hx/contact_us",
+    name: "Shipping & Delivery Policy",
+    link: "/shipping",
   },
+
+  // {
+  //   name: "Contact us",
+  //   link: "#contact",
+  // },
 ];
+
+// const product = [
+//   {
+//     link: "#hero",
+//     name: "Home",
+//   },
+//   {
+//     link: "#about",
+//     name: "About",
+//   },
+//   {
+//     link: "#onboarding",
+//     name: "Onboarding",
+//   },
+//   {
+//     link: "#contact",
+//     name: "Contact",
+//   },
+// ];
 
 const Footer = () => {
   return (
-    <motion.section
-      variants={staggerChildren}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className={`paddings ${css.wrapper}`}
-    >
-      <motion.div
-        variants={footerVariants}
-        className={`innerWidth yPaddings flexCenter ${css.container}`}
-      >
-        <div className={css.left}>
-          <span className="primaryText">
-            Let's make something <br />
-            amazing together.
-          </span>
-          {/* <span className="primaryText">
-            Start by <a href="mailto:zainkeepscode@gmail.com">saying hi</a>
-          </span> */}
+    <div class="container">
+      <footer class="pt-5">
+        <div class="row flex justify-content-between">
+          <div class="col-12 col-md-2 mb-3">
+            <h5>Product</h5>
+            <ul class=" flex-column">
+              {headerData.map((item, index) => (
+                <li class="nav-item mb-2" key={index}>
+                  <a href={item.link} class="nav-link p-0 text-muted">
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-2 mb-3">
+            <h5>Company</h5>
+            <ul class=" flex-column">
+              {data.map((item, index) => (
+                <li class="nav-item mb-2" key={index}>
+                  <Link to={item.link} class="nav-link p-0 text-muted">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Subscribe to stay updated about latest offers.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">
+                  Email address
+                </label>
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn btn-primary" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
 
-        <div className={css.right}>
-          <div className={css.info}>
-            <span className="secondaryText">Information</span>
-            <p>West Bengal, India</p>
-          </div>
-          <ul className={css.menu}>
-            {data.map(({ name, link }) => (
-              <li>
-                <a href={link}>{name}</a>
-              </li>
-            ))}
+        <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 border-top">
+          <p>
+            <img src="/favicon.png" width="70px" height="70px" alt="kapestar" />
+            © 2023 Kapestar Pvt Ltd. All rights reserved.
+          </p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3">
+              <a class="link-dark" href="#">
+                <svg class="bi" width="24" height="24">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a class="link-dark" href="#">
+                <svg class="bi" width="24" height="24">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="ms-3">
+              <a class="link-dark" href="#">
+                <svg class="bi" width="24" height="24">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
-      </motion.div>
-    </motion.section>
+      </footer>
+    </div>
   );
 };
 
