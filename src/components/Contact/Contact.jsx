@@ -3,6 +3,7 @@ import { staggerChildren } from "../../utils/motion";
 import { motion } from "framer-motion";
 
 import css from "./Contact.module.scss";
+import Button from "../Button/Button";
 
 const Contact = () => {
   return (
@@ -100,6 +101,8 @@ const Contact = () => {
               rows="3"
             ></textarea>
           </div>
+
+          <Button>Get in touch</Button>
         </form>
       </div>
     </motion.section>

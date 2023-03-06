@@ -4,6 +4,7 @@ import css from "./Footer.module.scss";
 import { motion } from "framer-motion";
 import { headerData } from "../Header/Header";
 import { Link } from "react-router-dom";
+import Button from "../Button/Button";
 
 const data = [
   {
@@ -103,9 +104,7 @@ const Footer = () => {
                   class="form-control"
                   placeholder="Email address"
                 />
-                <button class="btn btn-primary" type="button">
-                  Subscribe
-                </button>
+                <Button type="button">Subscribe</Button>
               </div>
             </form>
           </div>
