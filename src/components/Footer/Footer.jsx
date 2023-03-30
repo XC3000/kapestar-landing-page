@@ -58,8 +58,8 @@ const Footer = () => {
       <footer class="pt-5">
         <img
           className="mb-3"
-          src="/footer.png"
-          width="40px"
+          src="/logo.png"
+          width="150px"
           height="40px"
           alt="kapestar"
         />
