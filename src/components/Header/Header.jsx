@@ -36,7 +36,7 @@ const Header = () => {
     >
       <nav className="nav container">
         <Link to="/" className="nav__logo">
-          Kapestar
+          <img src="/logo.png" alt="kapestar" width="100" height="20" />
         </Link>
 
         <div

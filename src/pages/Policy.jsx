@@ -6,160 +6,122 @@ const Policy = () => {
     <Layout>
       <div className="container mt-5">
         <h3>Privacy Policy</h3>
-        <p className="text-muted">Last updated on Feb 19th 2023</p>
+        <p className="text-muted">Last updated on Mar 31st 2023</p>
 
         <p>
-          This privacy policy sets out how KAPESTAR PRIVATE LIMITED uses and
-          protects any information that you give KAPESTAR PRIVATE LIMITED when
-          you use this website.
+          At Kapestar, we are committed to protecting your privacy. This Privacy
+          Policy explains how we collect, use, and share information about you
+          when you use our salon booking app (the "App").
         </p>
-
-        <p>
-          KAPESTAR PRIVATE LIMITED is committed to ensuring that your privacy is
-          protected. Should we ask you to provide certain information by which
-          you can be identified when using this website, and then you can be
-          assured that it will only be used in accordance with this privacy
-          statement.
-        </p>
-
-        <p>
-          KAPESTAR PRIVATE LIMITED may change this policy from time to time by
-          updating this page. You should check this page from time to time to
-          ensure that you are happy with any changes.
-        </p>
-
-        <p>We may collect the following information:</p>
-
-        <ul
-          style={{
-            listStyle: "unset",
-            paddingLeft: "1rem",
-          }}
-        >
-          <li>Name and job title</li>
-
-          <li>Contact information including email address</li>
-
+        <h2>Information We Collect</h2>
+        <p>We may collect the following types of information from you:</p>
+        <ul>
           <li>
-            Demographic information such as postcode, preferences and interests
+            Personal Information: This may include your name, email address,
+            phone number, and other contact information.
           </li>
-
-          <li>Other information relevant to customer surveys and/or offers</li>
-        </ul>
-
-        <p>What we do with the information we gather</p>
-
-        <p>
-          We require this information to understand your needs and provide you
-          with a better service, and in particular for the following reasons:
-        </p>
-
-        <ul
-          style={{
-            listStyle: "unset",
-            paddingLeft: "1rem",
-          }}
-        >
-          <li>Internal record keeping.</li>
-
           <li>
-            We may use the information to improve our products and services.
+            Appointment Information: This may include the date, time, location,
+            and services requested for your appointment.
           </li>
-
           <li>
-            We may periodically send promotional emails about new products,
-            special offers or other information which we think you may find
-            interesting using the email address which you have provided.
+            Device Information: This may include information about the device
+            you use to access the App, such as the type of device, operating
+            system, and browser.
           </li>
-
           <li>
-            From time to time, we may also use your information to contact you
-            for market research purposes. We may contact you by email, phone,
-            fax or mail. We may use the information to customise the website
-            according to your interests.
+            Usage Information: This may include information about how you use
+            the App, such as the pages you visit, the features you use, and the
+            actions you take.
+          </li>
+          <li>
+            Location Information: We may collect information about your location
+            with your permission to enable certain features of the App.
+          </li>
+          <li>
+            Camera Information: We may collect information from your device's
+            camera with your permission to enable certain features of the App.
           </li>
         </ul>
-
-        <p className="mt-1">
-          We are committed to ensuring that your information is secure. In order
-          to prevent unauthorised access or disclosure we have put in suitable
-          measures.
-        </p>
-
-        <p>How we use cookies</p>
-
-        <p>
-          A cookie is a small file which asks permission to be placed on your
-          computer's hard drive. Once you agree, the file is added and the
-          cookie helps analyses web traffic or lets you know when you visit a
-          particular site. Cookies allow web applications to respond to you as
-          an individual. The web application can tailor its operations to your
-          needs, likes and dislikes by gathering and remembering information
-          about your preferences.
-        </p>
-
-        <p>
-          We use traffic log cookies to identify which pages are being used.
-          This helps us analyses data about webpage traffic and improve our
-          website in order to tailor it to customer needs. We only use this
-          information for statistical analysis purposes and then the data is
-          removed from the system.
-        </p>
-
-        <p>
-          Overall, cookies help us provide you with a better website, by
-          enabling us to monitor which pages you find useful and which you do
-          not. A cookie in no way gives us access to your computer or any
-          information about you, other than the data you choose to share with
-          us.
-        </p>
-
-        <p>
-          You can choose to accept or decline cookies. Most web browsers
-          automatically accept cookies, but you can usually modify your browser
-          setting to decline cookies if you prefer. This may prevent you from
-          taking full advantage of the website.
-        </p>
-
-        <p>Controlling your personal information</p>
-
-        <p>
-          You may choose to restrict the collection or use of your personal
-          information in the following ways:
-        </p>
-
-        <ul
-          style={{
-            listStyle: "unset",
-            paddingLeft: "1rem",
-          }}
-        >
+        <h2>How We Use Your Information</h2>
+        <p>We may use your information for the following purposes:</p>
+        <ul>
           <li>
-            whenever you are asked to fill in a form on the website, look for
-            the box that you can click to indicate that you do not want the
-            information to be used by anybody for direct marketing purposes
+            To provide the services you request through the App, including
+            booking and managing salon appointments.
           </li>
-
+          <li>To improve the App and the services we offer.</li>
           <li>
-            if you have previously agreed to us using your personal information
-            for direct marketing purposes, you may change your mind at any time
-            by writing to or emailing us at richard@kapestar.com
+            To communicate with you about your appointments and our services.
+          </li>
+          <li>
+            To send you promotional materials and other communications that may
+            be of interest to you, only if you have provided your consent to
+            receive such communications.
+          </li>
+          <li>
+            To comply with legal obligations and to protect our rights and
+            interests.
           </li>
         </ul>
-
+        <h2>Sharing Your Information</h2>
         <p>
-          We will not sell, distribute or lease your personal information to
-          third parties unless we have your permission or are required by law to
-          do so. We may use your personal information to send you promotional
-          information about third parties which we think you may find
-          interesting if you tell us that you wish this to happen.
+          We may share your information with third parties in the following
+          circumstances:
         </p>
+        <ul>
+          <li>
+            With salon owners and staff members who are involved in providing
+            the services you request through the App.
+          </li>
+          <li>
+            With service providers who help us operate and maintain the App.
+          </li>
+          <li>
+            With third parties who provide promotional materials and other
+            communications that may be of interest to you, only if you have
+            provided your consent to receive such communications.
+          </li>
+          <li>
+            With law enforcement and other government authorities to comply with
+            legal obligations or to protect our rights and interests.
+          </li>
+          <li>
+            In connection with a business transaction, such as a merger,
+            acquisition, or sale of assets.
+          </li>
+        </ul>
+        <h2>Your Choices</h2>
+        <p>
+          You can choose not to provide us with certain information, but this
+          may limit your ability to use certain features of the App.
+        </p>
+        <p>
+          You can also choose to opt-out of receiving promotional materials and
+          other communications from us by following the instructions provided in
+          those communications.
+        </p>
+        <h2>Security</h2>
+        <p>
+          We take reasonable measures to protect your information from
+          unauthorized access, use, or disclosure. However, no method of
+          transmission over the internet or electronic storage is completely
+          secure, and we cannot guarantee the absolute security of your
+          information.
+        </p>
+        <h2>Changes to this Privacy Policy</h2>
 
         <p>
-          If you believe that any information we are holding on you is incorrect
-          or incomplete, please write to or email us as soon as possible, at the
-          above address. We will promptly correct any information found to be
-          incorrect.
+          We may update this Privacy Policy from time to time by posting a new
+          version on our website or within the App. Your continued use of the
+          App after any such changes constitutes your acceptance of the new
+          Privacy Policy.
+        </p>
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or concerns about this Privacy Policy,
+          please contact us at{" "}
+          <a href="mailto:contact@kapestar.com">contact@kapestar.com</a>.
         </p>
       </div>
     </Layout>
