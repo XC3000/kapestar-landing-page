@@ -54,8 +54,8 @@ const data = [
 
 const Footer = () => {
   return (
-    <div class="container">
-      <footer class="pt-5">
+    <div className="container">
+      <footer className="pt-5">
         <img
           className="mb-3"
           src="/logo.png"
@@ -63,13 +63,13 @@ const Footer = () => {
           height="40px"
           alt="kapestar"
         />
-        <div class="row flex justify-content-between">
-          <div class="col-12 col-md-2 mb-3">
+        <div className="row flex justify-content-between">
+          <div className="col-12 col-md-2 mb-3">
             <h5>Product</h5>
-            <ul class=" flex-column">
+            <ul className=" flex-column">
               {headerData.map((item, index) => (
-                <li class="nav-item mb-2" key={index}>
-                  <a href={item.link} class="nav-link p-0 text-muted">
+                <li className="nav-item mb-2" key={index}>
+                  <a href={item.link} className="nav-link p-0 text-muted">
                     {item.name}
                   </a>
                 </li>
@@ -77,12 +77,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div class="col-12 col-md-2 mb-3">
+          <div className="col-12 col-md-2 mb-3">
             <h5>Company</h5>
-            <ul class=" flex-column">
+            <ul className=" flex-column">
               {data.map((item, index) => (
-                <li class="nav-item mb-2" key={index}>
-                  <Link to={item.link} class="nav-link p-0 text-muted">
+                <li className="nav-item mb-2" key={index}>
+                  <Link to={item.link} className="nav-link p-0 text-muted">
                     {item.name}
                   </Link>
                 </li>
@@ -90,18 +90,18 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div class="col-md-5 offset-md-1 mb-3">
+          <div className="col-md-5 offset-md-1 mb-3">
             <form>
               <h5>Subscribe to our newsletter</h5>
               <p>Subscribe to stay updated about latest offers.</p>
-              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                <label for="newsletter1" class="visually-hidden">
+              <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label htmlFor="newsletter1" className="visually-hidden">
                   Email address
                 </label>
                 <input
                   id="newsletter1"
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   placeholder="Email address"
                 />
                 <Button type="button">Subscribe</Button>
@@ -110,27 +110,27 @@ const Footer = () => {
           </div>
         </div>
 
-        <div class="d-flex flex-column flex-sm-row justify-content-between pt-4 border-top">
+        <div className="d-flex flex-column flex-sm-row justify-content-between pt-4 border-top">
           <p>© 2023 Kapestar Pvt Ltd. All rights reserved.</p>
-          <ul class="list-unstyled d-flex">
-            <li class="ms-3">
-              <a class="link-dark" href="#">
-                <svg class="bi" width="24" height="24">
-                  <use xlink:href="#twitter"></use>
+          <ul className="list-unstyled d-flex">
+            <li className="ms-3">
+              <a className="link-dark" href="#">
+                <svg className="bi" width="24" height="24">
+                  <use xlinkHref="#twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="ms-3">
-              <a class="link-dark" href="#">
-                <svg class="bi" width="24" height="24">
-                  <use xlink:href="#instagram"></use>
+            <li className="ms-3">
+              <a className="link-dark" href="#">
+                <svg className="bi" width="24" height="24">
+                  <use xlinkHref="#instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="ms-3">
-              <a class="link-dark" href="#">
-                <svg class="bi" width="24" height="24">
-                  <use xlink:href="#facebook"></use>
+            <li className="ms-3">
+              <a className="link-dark" href="#">
+                <svg className="bi" width="24" height="24">
+                  <use xlinkHref="#facebook"></use>
                 </svg>
               </a>
             </li>

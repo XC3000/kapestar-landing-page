@@ -48,8 +48,8 @@ const Header = () => {
           id="nav-menu"
         >
           <ul className="nav__list">
-            {headerData.map((item) => (
-              <li className="nav__item">
+            {headerData.map((item, index) => (
+              <li key={index} className="nav__item">
                 <a href={item.link} className="nav__link">
                   {item.name}
                 </a>
