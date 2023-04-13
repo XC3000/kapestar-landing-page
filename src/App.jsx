@@ -13,8 +13,7 @@ import Home from "./pages/Home";
 import Policy from "./pages/Policy";
 import Shipping from "./pages/Shipping";
 import Terms from "./pages/Terms";
-
-import css from "./styles/App.module.scss";
+import Calculator from "./pages/Calculator";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/shipping",
     element: <Shipping />,
+  },
+  {
+    path: "/cost-calculator",
+    element: <Calculator />,
   },
 ]);
 

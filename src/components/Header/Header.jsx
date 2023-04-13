@@ -22,6 +22,10 @@ export const headerData = [
     link: "#contact",
     name: "Contact",
   },
+  {
+    link: "#contact",
+    name: "Calculator",
+  },
 ];
 
 const Header = () => {
