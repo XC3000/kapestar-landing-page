@@ -79,9 +79,15 @@ const Footer = () => {
             <ul className=" flex-column">
               {data.map((item, index) => (
                 <li className="nav-item mb-2" key={index}>
-                  <Link to={item.link} className="nav-link p-0 text-muted">
-                    {item.name}
-                  </Link>
+                  {item.external ? (
+                    <a href={item.link} className="nav-link p-0 text-muted">
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link to={item.link} className="nav-link p-0 text-muted">
+                      {item.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

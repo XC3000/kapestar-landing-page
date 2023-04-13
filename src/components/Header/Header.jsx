@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import useWindowScroll from "../../hooks/useWindowScroll";
 
@@ -7,23 +7,23 @@ import "./Header.scss";
 
 export const headerData = [
   {
-    external: false,
-    link: "/",
+    external: true,
+    link: window.location.href,
     name: "Home",
   },
   {
-    external: false,
-    link: "#about",
+    external: true,
+    link: `${window.location.origin}#about`,
     name: "About",
   },
   {
-    external: false,
-    link: "#onboarding",
+    external: true,
+    link: `${window.location.origin}#onboarding`,
     name: "Onboarding",
   },
   {
-    external: false,
-    link: "#contact",
+    external: true,
+    link: `${window.location.origin}#contact`,
     name: "Contact",
   },
   {
@@ -55,9 +55,15 @@ const Header = () => {
           <ul className="nav__list">
             {headerData.map((item, index) => (
               <li key={index} className="nav__item">
-                <Link to={item.link} className="nav__link">
-                  {item.name}
-                </Link>
+                {item.external ? (
+                  <a href={item.link} className="nav__link">
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link to={item.link} className="nav__link">
+                    {item.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

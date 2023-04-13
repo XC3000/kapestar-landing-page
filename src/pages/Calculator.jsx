@@ -9,13 +9,19 @@ import Layout from "../Layout/Layout";
 import { useForm, useWatch } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useEffect, useState } from "react";
 
 const schema = yup
   .object({
-    price: yup.number("Please Enter a number").min(1).max(100000).required(),
-    type: yup.string().required(),
-    quantity: yup.number().required().min(1).max(1000),
-    usedQuantity: yup.number().required().min(1).max(1000),
+    price: yup
+      .number("Please Enter a number")
+      .min(1)
+      .max(100000)
+      .required()
+      .label("Product Price"),
+    type: yup.string().required().label("Product Type"),
+    quantity: yup.number().required().min(1).max(1000).label("Quantity"),
+    // usedQuantity: yup.number().min(1).max(1000).optional(),
   })
   .required();
 
@@ -26,9 +32,11 @@ function FormExample() {
     formState: { errors },
     control,
     setValue,
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
+      price: 0,
       type: "product",
       calc: 0,
       totalProductCost: 0,
@@ -50,14 +58,34 @@ function FormExample() {
     name: "usedQuantity",
   });
 
+  const resetOnTypeChange = () => {
+    reset((formValues) => ({
+      ...formValues,
+      quantity: 0,
+      usedQuantity: 0,
+      calc: 0,
+      totalProductCost: 0,
+    }));
+  };
+
+  useEffect(() => {
+    resetOnTypeChange();
+  }, [type]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   const onSubmit = (data) => {
-    // console.log(data);
+    console.log(data);
     const cost = parseFloat(parseFloat(data.price / data.quantity).toFixed(2));
-    const totalProductCost = parseFloat(
-      parseFloat(cost * usedQuantity).toFixed(2)
-    );
+    if (type === "product") {
+      const totalProductCost = parseFloat(
+        parseFloat(cost * usedQuantity).toFixed(2)
+      );
+      setValue("totalProductCost", totalProductCost);
+    }
     setValue("calc", cost);
-    setValue("totalProductCost", totalProductCost);
   };
 
   return (
