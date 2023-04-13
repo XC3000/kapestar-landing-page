@@ -1,7 +1,4 @@
 import React from "react";
-import { footerVariants, staggerChildren } from "../../utils/motion";
-import css from "./Footer.module.scss";
-import { motion } from "framer-motion";
 import { headerData } from "../Header/Header";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
@@ -69,9 +66,9 @@ const Footer = () => {
             <ul className=" flex-column">
               {headerData.map((item, index) => (
                 <li className="nav-item mb-2" key={index}>
-                  <a href={item.link} className="nav-link p-0 text-muted">
+                  <Link to={item.link} className="nav-link p-0 text-muted">
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

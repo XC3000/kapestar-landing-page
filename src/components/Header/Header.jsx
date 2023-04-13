@@ -7,23 +7,28 @@ import "./Header.scss";
 
 export const headerData = [
   {
+    external: false,
     link: "/",
     name: "Home",
   },
   {
+    external: false,
     link: "#about",
     name: "About",
   },
   {
+    external: false,
     link: "#onboarding",
     name: "Onboarding",
   },
   {
+    external: false,
     link: "#contact",
     name: "Contact",
   },
   {
-    link: "#contact",
+    external: false,
+    link: "/cost-calculator",
     name: "Calculator",
   },
 ];
@@ -50,9 +55,9 @@ const Header = () => {
           <ul className="nav__list">
             {headerData.map((item, index) => (
               <li key={index} className="nav__item">
-                <a href={item.link} className="nav__link">
+                <Link to={item.link} className="nav__link">
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
