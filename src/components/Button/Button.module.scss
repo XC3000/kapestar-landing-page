@@ -3,7 +3,7 @@
 .cta {
   background-color: $primary;
   color: $secondary-white;
-  padding: 1rem 3rem;
+  padding: 0.5rem 3rem;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -13,4 +13,11 @@
   align-items: center;
   gap: 10px;
   justify-content: center;
+
+  font-size: small;
+
+  @media (min-width: $md) {
+    font-size: medium;
+    padding: 0.8rem 3rem;
+  }
 }

@@ -3,6 +3,10 @@ import { headerData } from "../Header/Header";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
+import { LuPhone, LuMail } from "react-icons/lu";
+
+import styles from "./Footer.module.scss";
+
 const data = [
   {
     name: "Privacy Policy",
@@ -94,10 +98,10 @@ const Footer = () => {
           </div>
 
           <div className="col-md-5 offset-md-1 mb-3">
-            <form>
+            <form className="mb-3">
               <h5>Subscribe to our newsletter</h5>
               <p>Subscribe to stay updated about latest offers.</p>
-              <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+              <div className="d-flex flex-column flex-lg-row w-100 gap-2">
                 <label htmlFor="newsletter1" className="visually-hidden">
                   Email address
                 </label>
@@ -110,6 +114,39 @@ const Footer = () => {
                 <Button type="button">Subscribe</Button>
               </div>
             </form>
+            <div class="row">
+              <div class="col-md-6">
+                <h5 className={styles.footerHeading}>Registered Address:</h5>
+                <p className={styles.footerText}>
+                  4/A Surath Ch Bose Lane Ghosal Bagan Konnagar Hooghly, WB
+                  712235 Kolkata, West Bengal, India
+                </p>
+              </div>
+              <div class="col-md-6">
+                <h5 className={styles.footerHeading}>Operational Address:</h5>
+                <p className={styles.footerText}>
+                  4/A Surath Ch Bose Lane Ghosal Bagan Konnagar Hooghly, WB
+                  712235 Kolkata, West Bengal, India
+                </p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12">
+                <LuPhone fontSize={"0.9rem"} style={{ marginRight: "5px" }} />
+                <a className={styles.footerText} href="tel:+918240066500">
+                  +918240066500
+                </a>
+              </div>
+              <div className="col-md-12">
+                <LuMail fontSize={"0.9rem"} style={{ marginRight: "5px" }} />
+                <a
+                  className={styles.footerText}
+                  href="mailto:admin@kapestar.com"
+                >
+                  admin@kapestar.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
