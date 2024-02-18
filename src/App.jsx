@@ -15,6 +15,8 @@ import Shipping from "./pages/Shipping";
 import Terms from "./pages/Terms";
 import Calculator from "./pages/Calculator";
 
+import { ToastContainer } from "react-toastify";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,7 +46,12 @@ const router = createBrowserRouter([
 
 const App = () => {
   //don't forget to add font link in index.html
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+      <ToastContainer />
+    </>
+  );
 };
 
 export default App;

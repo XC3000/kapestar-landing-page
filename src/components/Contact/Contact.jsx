@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { staggerChildren } from "../../utils/motion";
 import { motion } from "framer-motion";
 
 import css from "./Contact.module.scss";
 import Button from "../Button/Button";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [userType, setUserType] = useState("");
+  const [issue, setIssue] = useState("");
+  const [description, setDescription] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name || !email || !userType || !issue || !description) {
+      toast.error("Please fill all the fields");
+      return;
+    }
+
+    setName("");
+    setEmail("");
+    setUserType("");
+    setIssue("");
+    setDescription("");
+    toast.success("Your message has been sent successfully");
+  };
+
   return (
     <motion.section
       variants={staggerChildren}
@@ -23,33 +46,43 @@ const Contact = () => {
           Get in touch 👋
         </h1>
 
-        <form>
+        <form onSubmit={onSubmit}>
           <div className="grid">
             <div className="row">
               <div className="col-sm-12 col-md-6 col-lg-6">
                 <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">
+                  <label for="name" class="form-label">
                     Name
                   </label>
                   <input
                     type="text"
                     class="form-control"
-                    id="exampleFormControlInput1"
+                    id="name"
                     placeholder="Enter Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    minLength={5}
+                    maxLength={20}
                   />
                 </div>
               </div>
 
               <div className="col-sm-12 col-md-6 col-lg-6">
                 <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">
+                  <label for="email" class="form-label">
                     Email
                   </label>
                   <input
                     type="email"
                     class="form-control"
-                    id="exampleFormControlInput1"
+                    id="email"
                     placeholder="Enter Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    minLength={5}
+                    maxLength={20}
                   />
                 </div>
               </div>
@@ -64,6 +97,9 @@ const Contact = () => {
                   <select
                     class="form-select"
                     aria-label="Default select example"
+                    value={userType}
+                    onChange={(e) => setUserType(e.target.value)}
+                    required
                   >
                     <option selected>Please Select</option>
                     <option value="3">Customer</option>
@@ -81,6 +117,9 @@ const Contact = () => {
                   <select
                     class="form-select"
                     aria-label="Default select example"
+                    value={issue}
+                    onChange={(e) => setIssue(e.target.value)}
+                    required
                   >
                     <option selected>Please Select</option>
                     <option value="1">Ccmplaint</option>
@@ -99,6 +138,11 @@ const Contact = () => {
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              required
+              minLength={5}
+              maxLength={20}
             ></textarea>
           </div>
 

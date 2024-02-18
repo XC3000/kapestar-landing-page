@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { headerData } from "../Header/Header";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 import { LuPhone, LuMail } from "react-icons/lu";
 
 import styles from "./Footer.module.scss";
+import { toast } from "react-toastify";
 
 const data = [
   {
@@ -54,6 +55,20 @@ const data = [
 // ];
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (!email) {
+      toast.error("Please enter your email for subscribing to our newsletter");
+      return;
+    }
+
+    setEmail("");
+    toast.success("Thank you for subscribing to our newsletter");
+  };
+
   return (
     <div className="container">
       <footer className="pt-5">
@@ -65,19 +80,6 @@ const Footer = () => {
           alt="kapestar"
         />
         <div className="row flex justify-content-between">
-          <div className="col-12 col-md-2 mb-3">
-            <h5>Product</h5>
-            <ul className=" flex-column">
-              {headerData.map((item, index) => (
-                <li className="nav-item mb-2" key={index}>
-                  <Link to={item.link} className="nav-link p-0 text-muted">
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           <div className="col-12 col-md-2 mb-3">
             <h5>Company</h5>
             <ul className=" flex-column">
@@ -98,7 +100,7 @@ const Footer = () => {
           </div>
 
           <div className="col-md-5 offset-md-1 mb-3">
-            <form className="mb-3">
+            <form className="mb-3" onSubmit={onSubmit}>
               <h5>Subscribe to our newsletter</h5>
               <p>Subscribe to stay updated about latest offers.</p>
               <div className="d-flex flex-column flex-lg-row w-100 gap-2">
@@ -110,8 +112,13 @@ const Footer = () => {
                   type="text"
                   className="form-control"
                   placeholder="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  minLength={2}
+                  maxLength={50}
                 />
-                <Button type="button">Subscribe</Button>
+                <Button type="submit">Subscribe</Button>
               </div>
             </form>
             <div class="row">
