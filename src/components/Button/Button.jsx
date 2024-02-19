@@ -9,4 +9,17 @@ const Button = ({ children, ...otherProps }) => {
   );
 };
 
+export const ButtonLink = ({ children, ...otherProps }) => {
+  return (
+    <a
+      href="https://play.google.com/store/apps/details?id=com.kapestar.salonowner"
+      target="_blank"
+      className={css.cta}
+      {...otherProps}
+    >
+      {children}
+    </a>
+  );
+};
+
 export default Button;

@@ -4,7 +4,7 @@ import { FaGooglePlay } from "react-icons/fa";
 import { BsApple } from "react-icons/bs";
 
 import css from "./Hero.module.scss";
-import Button from "../Button/Button";
+import Button, { ButtonLink } from "../Button/Button";
 // import css from "./NewHero.module.scss";
 // import { motion } from "framer-motion";
 const Hero = () => {
@@ -22,9 +22,9 @@ const Hero = () => {
           </p>
 
           <div className={css.actions}>
-            <Button>
+            <ButtonLink>
               Get Started <FaGooglePlay /> <BsApple />{" "}
-            </Button>
+            </ButtonLink>
           </div>
         </div>
 
