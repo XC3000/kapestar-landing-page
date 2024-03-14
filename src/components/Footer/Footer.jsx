@@ -121,7 +121,7 @@ const Footer = () => {
                 <Button type="submit">Subscribe</Button>
               </div>
             </form>
-            <div class="row">
+            {/*  <div class="row">
               <div class="col-md-6">
                 <h5 className={styles.footerHeading}>Registered Address:</h5>
                 <p className={styles.footerText}>
@@ -136,7 +136,7 @@ const Footer = () => {
                   712235 Kolkata, West Bengal, India
                 </p>
               </div>
-            </div>
+            </div> */}
             <div className="row">
               <div className="col-md-12">
                 <LuPhone fontSize={"0.9rem"} style={{ marginRight: "5px" }} />
